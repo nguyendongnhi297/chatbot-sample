@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Sua Lop</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container" style="margin-top: 50px;">
+
+	<% if (messages.error) { %>
+	<div class="alert alert-danger" role="alert"><%- messages.error %></div>
+	<% } %>
+
+    <div class="card">
+    	<div class="card-header">
+			Sửa Lớp
+		</div>
+        <div class="card-body">
+            <form action="/themlop/update/<%= id %>" method="post">
+                <div class="form-group">
+                    <label>Id:</label>
+                    <input type="text" class="form-control" name="id" value="<%= id %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Bài Học:</label>
+                    <input type="text" class="form-control" name="baihoc" value="<%= baihoc%>" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label>Miêu Tả:</label>
+                    <input type="text" class="form-control" name="mieuta" value="<%= mieuta %>" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label>Ngày BĐ:</label>
+                    <input type="text" class="form-control" name="ngaybd" value="<%= ngaybd %>" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label>Ngày KT:</label>
+                    <input type="text" class="form-control" name="ngaykt" value="<%= ngaykt %>" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label>Học Phí:</label>
+                   <input type="text" class="form-control" name="hocphi" value="<%= hocphi %>" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="buoihoc">Chon Buổi Học:</label>
+                    <select name="buoihoc">
+                    <option value="1">Sang</option>
+                    <option value="2">Trua</option>
+                    <option value="3">Chieu</option>
+                    </select> 
+                </div>
+                <div class="form-group">
+                    <label for="kinang">Chọn Kĩ Năng:</label>
+                    <select name="kinang">
+                    <option value="1">Gentle Yoga</option>
+                    <option value="2">Dynamic Yoga</option>
+                    <option value="3">High Fly </option>
+                    <option value="4">Yoga Twist</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dotuoi">Chọn Độ Tuổi:</label>
+                    <select name="dotuoi">
+                    <option value="1">6 - 12</option>
+                    <option value="2">12 - 45</option>
+                    <option value="3">Tren 45</option>
+                </div>
+
+                    <input  style="display:block" type="submit" class="btn btn-info" value="Cập Nhật"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

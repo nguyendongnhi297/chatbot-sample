@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Css/thembh.css">
+        <title>Them Nhu Cau Hoc</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <div id="mnthemkh" style="height: 450px;">
+        <h1>Thêm Nhu Cầu Học</h1>
+    <form action="/nchoc/themnc" method='POST'>
+        <th><label for="ngaydk"><b>Ngày ĐK: </b></label></th>
+        <input type="text" id="ngaydk" name="ngaydk" placeholder="" required>
+        <br>
+        <label for="buoihoc"><b>Chọn Buoi Hoc:</b></label>
+        <select name="buoihoc">
+            <option value="1">Sang</option>
+            <option value="2">Trua</option>
+            <option value="3">Chieu</option>
+            <option value="4">Toi</option>
+          </select> 
+          <br>
+            <label for="kinang"><b>Chọn Kĩ Năng:</b></label>
+            <select name="kinang">
+            <option value="1">Gentle Yoga</option>
+            <option value="2">Dynamic Yoga</option>
+            <option value="3">High Fly </option>
+            <option value="4">Yoga Twist</option>
+          </select>
+          <br>
+            <label for="dotuoi"><b>Chọn Độ Tuổi:</b></label>
+            <select name="dotuoi">
+              <option value="1">6 - 12</option>
+              <option value="2">12 - 45</option>
+              <option value="3">Tren 45</option>
+          </select>
+          <br>
+            <input type="submit" value="Thêm">
+    </form> 
+    </div>
+</body>

@@ -1,0 +1,176 @@
+body{
+  margin: 0 auto;
+  background-color: white;
+}
+.mySlides {display: none}
+* {box-sizing:border-box}
+.slideshow-container {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  margin: 0px  auto;
+}
+
+#logo{
+height:70px;
+width: 70px;
+margin-left: 240px;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#fixNav{
+  width: 100%;
+  height: 70px;
+  background-color: rgba(232, 211, 227, 0.6);
+  display: block;
+  position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
+  top: 0; /*Nằm trên cùng*/
+  left: 0; /*Nằm sát bên trái*/
+  z-index: 100000; /*Hiển thị lớp trên cùng*/
+}
+#fixNav ul{
+  margin: 0 ;
+  padding: 0;
+  /*margin-left: 30px*/
+}
+#fixNav ul li{
+  list-style:none inside;
+  width: auto;
+  float: left;
+  line-height: 70px; /*Cho text canh giữa menu*/
+  color: #fff;
+  padding: 0;
+  margin-right:10px;
+  position: relative;
+  margin-left:10px;
+}
+#fixNav ul li a{
+  text-transform: uppercase;
+  white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+  padding: 0 10px;
+  color:black;
+  display: block;
+  font-size:0.9em;
+  text-decoration: none;
+  font-weight: bold;
+}
+#fixNav ul li:hover {
+  background-color:rgba(255, 255, 255, 0.8);
+}
+#fixNav ul li:hover ul{
+  /*Display ra submenu*/
+  display: block;
+}
+#fixNav .fixdn {
+  float: right;
+  margin-right: 50px;
+}
+
+.menubt{
+float: right;
+margin-top: 15px;
+margin-right: 30px;
+
+}
+
+.btdn{
+margin-right: 30px;
+height: 40px;
+width: 100px;
+border: none;
+cursor: pointer;
+color:white;
+background-color: #555
+}
+.btdn:hover  {
+color: rgb(60, 60, 60);
+}
+.btdk{
+margin-right: 15px;
+height: 40px;
+width: 100px;
+border: none;
+cursor: pointer;
+color:white;
+background-color: #555
+}
+.btdk:hover {
+color: rgb(60, 60, 60);
+}
+#menubook{
+width: 100%;
+height: 1420px;
+background-color: #DCDCDC;
+margin: auto;
+position: absolute;
+}
+#list-class{
+width: 91%;
+height: 420px;
+border: 1px solid #ccc;
+margin-top: 20px;
+margin-left: 75px;
+border-radius: 5px;
+background-color: white;
+border-radius: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dpl{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height: 410px;
+width: 325px;
+float: left;
+background-color: white;
+margin-top: 10px;
+margin-right: 10px;
+margin-left: 10px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+}
+.dpl p{
+text-align:center;
+font-style: italic;
+font-weight: bold;
+font-size: 20px;
+color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 350px;
+}
+.timetable{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height: 800px;
+width: 99%;
+background-color: white;
+margin-top: 10px;
+margin-right: 10px;
+margin-left: 0px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-repeat:no-repeat;
+}
+#text{
+text-align: center;
+font-size: 26px;
+margin-top: 10px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+}
+#schedule{
+width: 91%;
+height: 980px;
+border: 1px solid #ccc;
+margin-left: 75px;
+background-color:white;
+margin-top: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#title{
+margin-top: 10px;
+font-size: 26px;
+margin-left:15px;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+}

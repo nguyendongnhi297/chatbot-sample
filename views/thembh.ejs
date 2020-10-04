@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Css/thembh.css">
+        <title>Them Lop Hoc</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+  <div><a href='javascript: history.go(-1)' style="text-decoration: none;font-size: 30px;">Back</a></div>
+  <div id="mnthemkh">
+    <h1>Thêm Khóa Học</h1>
+    <form action="/themlop/addkh" method='POST'>
+        <th><label for="baihoc"><b>Tên Khóa Học: </b></label></th>
+        <input type="text" id="bhoc" name="baihoc" placeholder="" required>
+        <br>
+        <th><label for="mieuta"><b>Miêu Tả: </b></label></th>
+        <input type="text" id="mta" name="mieuta" placeholder=""> 
+        <br>
+        <th><label for="ngaybd"><b>Ngày BĐ: </b></label></th>
+        <input type="text" id="nbd" name="ngaybd" placeholder=""> 
+        <br>
+        <th><label for="ngaykt"><b>Ngày KT: </b></label></th>
+        <input type="text" id="nbd" name="ngaykt" placeholder=""> 
+        <br>
+        <label for="buoihoc"><b>Chon Buổi Học:</b></label>
+        <select name="buoihoc">
+          <option value="1">Sang</option>
+          <option value="2">Trua</option>
+          <option value="3">Chieu</option>
+        </select> 
+        <br>
+          <label for="kinang"><b>Chọn Kĩ Năng:</b></label>
+          <select name="kinang">
+          <option value="1">Gentle Yoga</option>
+          <option value="2">Dynamic Yoga</option>
+          <option value="3">High Fly </option>
+          <option value="4">Yoga Twist</option>
+        </select>
+        <br>
+          <label for="dotuoi"><b>Chọn Độ Tuổi:</b></label>
+          <select name="dotuoi">
+            <option value="1">6 - 12</option>
+            <option value="2">12 - 45</option>
+            <option value="3">Tren 45</option>
+        </select>
+        <br>
+        <th><label for="hocphi"><b>Học Phí: </b></label></th>
+        <input type="text" id="hphi" name="hocphi" placeholder="">
+        <input type="submit" value="Thêm Lớp Học">
+     </form>
+</div>
+<div class="main">
+  <div class="full-sun">
+    <div class="sun"></div>
+    <div class="ray1"></div>
+    <div class="ray2"></div>
+    <div class="ray3"></div>
+    <div class="ray4"></div>
+    <div class="ray5"></div>
+    <div class="ray6"></div>
+  </div>
+  <div class="cloud">
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+  </div>
+</div>
+</body>

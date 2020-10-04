@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/Trangchu.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+        <title>Trang Chủ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+            * { padding: 0; box-sizing: border-box; }
+            #chatbot{
+              position:fixed;
+              width:350px;
+              border:1px solid white;
+              border-radius: 2%;
+              height: 450px;
+              display: none;
+              bottom: 30px; 
+              right: 0;
+            }
+           #f { position: fixed;
+                background-color: wheat;
+                width: 350px;
+                margin-left: 0px; }
+            #f input {border: 1px solid black; width:75%; font-size:120%; margin-bottom: 00px;}
+            #f button { background: rgb(20, 144, 255); border-radius: 5%; margin-left:10px; width:20%;font-size:120%;}
+            #messages {list-style-type: none; padding: 0; padding-bottom: 3%;font: 15px Helvetica, Arial;overflow: auto;height: 350px;}
+            #messages li { padding: 5px 10px;border-radius:15% }
+            #messages li:nth-child(odd) { background: whitesmoke; margin-left: 100px;width: 70%;  }
+
+          </style>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <div id="full">
+            <div class="slideshow-container">
+                <nav id="fixNav">
+                    <ul>
+                     <a href="#"><img id="logo" src="Image/logo1.JPG"></a>
+                        <li><a href="/khoahoc">Đăng Ký Lớp</a></li>
+                        <li><a href="/khoahochv">Đang Học</a></li>
+                        <li><a href="/khoahocnch">Xem Nhu Cầu Học</a></li>
+                        <div class="menubt">
+                            <a href="/dangxuat" style="text-decoration: none; color:white"><button class="btdn">Đăng Xuất</button></a>
+        
+                        </div> 
+                        
+                    </ul>
+                    
+                </nav>
+            
+             <section class="category">
+            <div class="container">
+                <ul class="category__list">
+                    <li class="category__item">
+                        <img src="Image/gentleyoga.jpg" alt="" class="category__image">
+                        <h3 class="category__name">Gentle Yoga</h3>
+                        <a href="http://www.yogaplus.vn/blog/gentle-yoga-co-phai-la-lop-hoc-yoga-danh-cho-ngoi-moi-bat-dau" target = "_blank" class="category__details">
+                            Xem Thêm <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="category__item">
+                        <img src="/Image/dynamicyoga.jpg" alt="" class="category__image">
+                        <h3 class="category__name">Dynamic Yoga</h3>
+                        <a href='http://universalyoga.com.vn/vi/dynamic-yoga-vi/' target="_blank" class="category__details">
+                            Xem Thêm <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="category__item">
+                        <img src="/Image/highflyyoga.jpg" alt="" class="category__image">
+                        <h3 class="category__name">High Fly</h3>
+                        <a href="https://tuoitre.vn/bay-cung-yoga-fly-20180401102205944.html" class="category__details">
+                            Xem Thêm <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="category__item">
+                        <img src="/Image/yogatwist.jpg" alt="" class="category__image">
+                        <h3 class="category__name">Yoga Twist</h3>
+                        <a href="http://universalyoga.com.vn/vi/yoga-twist-vi/" class="category__details">
+                            Xem Thêm <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+            <section class="outdoor">
+                <div class="container">
+                    <div class="outdoor__frame">
+                        <div class="outdoor__pic">
+                            <img src="Image/outdoor1.png" alt="" class="outdoor__image1">
+                        </div>
+                        <div class="outdoor__content1">
+                            <h2 class="outdoor__heading">
+                                Cách để tập thiền cho người mới bắt đầu
+                            </h2>
+                            <p class="outdoor__desc">
+                                Yoga hiện nay đang ngày càng phát triển ở Việt Nam và mang lại rất nhiều lợi ích về tinh thần và cơ thể cho các Yogi (người tập Yoga). Nhắc đến Thiền, nhiều người sẽ nghĩ đến liên quan đến Phật giáo. Tuy nhiên, khi Yoga kết hợp với Thiền sẽ tạo nên các hiệu quả kỳ diệu như chữa trị bệnh tật, tăng cường khả năng tập trung, cải thiện trí nhớ ...
+                                <br><a href="https://blog.wefit.vn/2019/05/nhung-cong-nang-ky-dieu-cua-thien-yoga/" target="_blank" style="text-decoration:none">Xem Thêm</a>
+                            </p>
+                            
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+            <section class="outdoor">
+                <div class="container">
+                    <div class="outdoor__frame">
+                        
+                        <div class="outdoor__content2">
+                            <h2 class="outdoor__heading">
+                                Chúng ta đang duỗi gì trong yoga?
+                            </h2>
+                            <p class="outdoor__desc">
+                                Chúng ta có thể làm rõ thuật ngữ “duỗi”? Chính xác là khi ở một tư thế yoga thì cái gì được duỗi? Cơ bắp? Mô liên kết? Hay cả hai? Những thuật ngữ dễ gây hiểu nhầm – duỗi, kèo dài v.v. Và từ những gì tôi nghe được, duỗi nói đúng ra không hẳn là tốt? Có đúng là cần phải duỗi không?
+                                <br>
+                                Đây là một câu hỏi hay!
+                                <br>
+                                Hãy làm rõ câu hỏi này một chút bằng việc xem xét từ “duỗi”. Duỗi là một từ duy nhất chúng ....
+                                <br> 
+                                <a href="https://www.yogavietnam.vn/chung-ta-dang-duoi-gi-trong-yoga/" target="_blank" style="text-decoration:none">Xem Thêm</a>
+                            </p>
+                            
+                        </div>
+                        <div class="outdoor__pic">
+                            <img src="Image/outdoor2.png" alt="" class="outdoor__image2">
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+            <section class="outdoor">
+                <div class="container">
+                    <div class="outdoor__frame">
+                        <div class="outdoor__pic">
+                            <img src="Image/outdoor3.png" alt="" class="outdoor__image3">
+                        </div>
+                        <div class="outdoor__content3">
+                            <h2 class="outdoor__heading">
+                                Lắng nghe cơ thể
+                            </h2>
+                            <p class="outdoor__desc">
+                                Các môn thể thao thi đấu hay rèn sức bền thường động viên chúng ta vượt qua tiếng nói bên trong mình, “Chậm thôi, dừng lại, mình không thể, mình chưa đủ mạnh.” Đôi khi việc vượt qua những lời nói đó lại là chìa khóa cho ta kết quả bất ngờ: chúng ta đạt được những điều ta chưa từng nghĩ rằng rằng mình có khả năng vì đã mạnh dạn lơ đi những lời nói tự nghi ngờ mình. Nhưng đôi khi ...
+                                <br><a href="https://www.yogavietnam.vn/lang-nghe-co-the/" target="_blank" style="text-decoration:none">Xem Thêm</a>
+                            </p>
+                            
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+            <section class="outdoor">
+                <div class="container">
+                    <div class="outdoor__frame">
+                        
+                        <div class="outdoor__content4  ">
+                            <h2 class="outdoor__heading">
+                                Yoga là gì?
+                            </h2>
+                            <p class="outdoor__desc">
+                                “YOGA” bắt nguồn từ “Yuj” trong tiếng Phạn có nghĩa là sự hợp nhất của cơ thể và tinh thần.
+                                 Yoga đã có từ xa xưa nhưng lại là món quà vô giá cho cuộc sống hiện đại. 
+                                Yoga là phương thuốc giúp loại bỏ từ gốc rễ vô số các căn bệnh. Yoga giúp cân bằng cơ thể...
+                                <br><a href="http://www.shivayogasanctuary.com/tim-hieu-ve-yoga" target="_blank" style="text-decoration:none">Xem Thêm</a>
+                            </p>
+                            
+                        </div>
+                        <div class="outdoor__pic">
+                                <iframe  class="outdoor__image4"  src="https://www.youtube.com/embed/VaoV1PrYft4">
+                                </iframe>      
+                            
+                        </div>
+    
+                    </div>
+                </div>
+                </section>      
+                <div class="hidden">
+                <img src="Image/slide1.jpg">
+              </div>
+              <div class="hidden">
+                <img src="Image/slide2.jpg">
+              </div>
+              <div class="hidden">
+                <img src="Image/slide3.jpg">
+              </div>
+              <div class="hidden">
+                <img src="Image/slide4.jpg">
+              </div>
+		<section class="enjoy">
+            <div class="container enjoy__inner">
+                <h2 class="enjoy__heading">
+                    Contact with us
+                </h2>
+				<p class="enjoy__text">
+                    Địa chỉ:<a target="_blank" href="https://www.google.com/maps/place/291+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+T%C3%A1m,+Ph%C6%B0%E1%BB%9Dng+12,+Qu%E1%BA%ADn+10,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7792476,106.6764748,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f27d3f1db71:0xd9db33fce57ecdb7!8m2!3d10.7792476!4d106.6786635?hl=vi-VN" style="text-decoration:none;"> 291 Cách Mạng Tháng Tám, Phường 12, Quận 10, Thành phố Hồ Chí Minh</a>  
+                </p>
+                <ul style="list-style-type: none;" class="enjoy__list">
+                    <li class="enjoy__item">
+                        <img src="Image/facebook.png" alt="" class="enjoy__image">
+                    </li>
+                    <li class="enjoy__item">
+                        <img src="Image/instagram.png" alt="" class="enjoy__image">
+                    </li>
+                    <li class="enjoy__item">
+                        <img src="Image/gmail.png" alt="" class="enjoy__image">
+                    </li>
+                    <li class="enjoy__item">
+                        <img src="Image/twitter.png" alt="" class="enjoy__image">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+       <button onclick="openForm()"><img src="Image/chatbot.png" style="height: 80px;width: 80px;position:fixed;bottom:50px;right: 0; "></button>
+        <div id="chatbot" style="background-color:white;">
+          <h1 style="background-color:whitesmoke; text-align: left;color:  rgb(255 130 171);" > Pinky <i class="fab fa-android"></i><i class="fab fa-android"></i><i class="fab fa-android"></i><button onclick="closeForm()" style="border:none;background-color:white;bottom: 0;height: 30px;width: 30px;font-size: 30px;margin-left: 110px;">X</button>   </h1>
+          <ul id="messages"  >
+            <li>Chào Mừng Bạn Đến Với ChatBot</li>
+          </ul>
+          <form method="GET" action="" id="f">
+            <input id="m" autocomplete="off" /><button type="submit">Send</button>
+          </form>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+           
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("hidden");
+
+            if (n===undefined){n= ++slideIndex;}
+            if (n > slides.length) {slideIndex = 1;}
+            if (n < 1) {slideIndex = slides.length}
+
+            $(slides[slideIndex-1]).fadeIn(2000);
+            slides[slideIndex-1].style.display = "block";
+            $(slides[slideIndex-1]).delay(3000);
+            $(slides[slideIndex-1]).fadeOut(1000);
+
+            setTimeout(showSlides, 6000);
+        }
+        function openForm() {
+          document.getElementById("chatbot").style.display = "block";
+            }
+
+        function closeForm() {
+            document.getElementById("chatbot").style.display = "none";
+            }
+
+        $(function () {
+        var socket = io("http://localhost:5000");
+        $('form').submit(function(e){
+          e.preventDefault(); 
+          socket.emit('chat message', $('#m').val());
+          $('#m').val('');
+          
+            return false;
+        });
+        socket.on('chat message', function(msg){
+          $('#messages').append($('<li>'+msg+'</li>'));
+          $('#messages').stop().animate({ scrollTop: $('#messages')[0].scrollHeight}, 1000);
+        });
+
+      });   
+    
+        </script>
+    </body>
+</html>
